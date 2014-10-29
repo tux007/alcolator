@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *beerPercentTextField;
 @property (weak, nonatomic) IBOutlet UISlider *beerCountSlider;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (weak, nonatomic) IBOutlet UILabel *beerNumberLabel;
 
 @end
 
@@ -43,8 +44,12 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
+    self.beerNumberLabel.text = [NSString stringWithFormat:@"%f", self.beerCountSlider.value];
+    
     
 }
+
+
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     [self.beerPercentTextField resignFirstResponder];
