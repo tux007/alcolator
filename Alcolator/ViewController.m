@@ -58,6 +58,13 @@
         
     // Set the placeholder text
     self.beerPercentTextField.placeholder = NSLocalizedString(@"% Alcohol Content Per Beer", @"Beer percent placeholder text");
+    
+    // Set text field color, background, border
+    _beerPercentTextField.layer.borderWidth = .5;
+    _beerPercentTextField.layer.borderColor = [[UIColor blackColor] CGColor];
+    _beerPercentTextField.layer.cornerRadius = 7;
+    _beerPercentTextField.clipsToBounds      = YES;
+    _beerPercentTextField.layer.backgroundColor = [[UIColor whiteColor] CGColor];
         
     // Tells `self.beerCountSlider` that when its value changes, it should call `[self -sliderValueDidChange:]`.
     // This is equivalent to connecting the IBAction in our previous checkpoint
@@ -89,6 +96,7 @@
     CGFloat itemHeight = 44;
     
     self.beerPercentTextField.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
+    
     
     CGFloat bottomOfTextField = CGRectGetMaxY(self.beerPercentTextField.frame);
     self.beerCountSlider.frame = CGRectMake(padding, bottomOfTextField + padding, itemWidth, itemHeight);

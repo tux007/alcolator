@@ -20,8 +20,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
     // Override point for customization after application launch.
-    ViewController *viewController = [[ViewController alloc] init];
-    self.window.rootViewController = viewController;
+    // ViewController *viewController = [[ViewController alloc] init];
+    // self.window.rootViewController = viewController;
+    BLCWhiskeyViewController *whiskeyViewController = [[BLCWhiskeyViewController alloc] init];
+    self.window.rootViewController = whiskeyViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
