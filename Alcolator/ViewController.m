@@ -51,7 +51,7 @@
     
     
     // Set our primary view's background color to lightGrayColor
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor cyanColor];
         
     // Tells the text field that `self`, this instance of `BLCViewController` should be treated as the text field's delegate
     self.beerPercentTextField.delegate = self;
@@ -90,10 +90,26 @@
 - (void) viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    CGFloat viewWidth = 320;
-    CGFloat padding = 20;
+    CGRect screen = [[UIScreen mainScreen] bounds];
+    
+    CGFloat viewWidth = screen.size.width;
+    CGFloat padding = 40;
+    
+    
     CGFloat itemWidth = viewWidth - padding - padding;
-    CGFloat itemHeight = 44;
+    
+    CGFloat itemHeight;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        padding = 50;
+        itemHeight = 100;
+    }
+    else
+    {
+        padding = 30;
+        itemHeight = 44;
+    }
     
     self.beerPercentTextField.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
     
