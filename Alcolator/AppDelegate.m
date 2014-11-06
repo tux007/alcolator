@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "BLCWhiskeyViewController.h"
+#import "BLCMainMenuViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,8 +23,14 @@
     // Override point for customization after application launch.
     // ViewController *viewController = [[ViewController alloc] init];
     // self.window.rootViewController = viewController;
-    BLCWhiskeyViewController *whiskeyViewController = [[BLCWhiskeyViewController alloc] init];
-    self.window.rootViewController = whiskeyViewController;
+    
+    //BLCWhiskeyViewController *whiskeyViewController = [[BLCWhiskeyViewController alloc] init];
+    // self.window.rootViewController = whiskeyViewController;
+    
+    BLCMainMenuViewController *mainMenuViewController = [[BLCMainMenuViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
+    self.window.rootViewController = navigationController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

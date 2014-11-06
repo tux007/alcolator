@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E206A3581A02E8CC00C504E4 /* BLCWhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E206A3571A02E8CC00C504E4 /* BLCWhiskeyViewController.m */; };
+		E20B4FC11A0B50B50051D542 /* BLCMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20B4FC01A0B50B50051D542 /* BLCMainMenuViewController.m */; };
 		E2F1DD1C1A002AE20091BEC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F1DD1B1A002AE20091BEC0 /* main.m */; };
 		E2F1DD1F1A002AE20091BEC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F1DD1E1A002AE20091BEC0 /* AppDelegate.m */; };
 		E2F1DD221A002AE20091BEC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F1DD211A002AE20091BEC0 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* Begin PBXFileReference section */
 		E206A3561A02E8CC00C504E4 /* BLCWhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCWhiskeyViewController.h; path = ../BLCWhiskeyViewController.h; sourceTree = "<group>"; };
 		E206A3571A02E8CC00C504E4 /* BLCWhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCWhiskeyViewController.m; path = ../BLCWhiskeyViewController.m; sourceTree = "<group>"; };
+		E20B4FBF1A0B50B50051D542 /* BLCMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCMainMenuViewController.h; sourceTree = "<group>"; };
+		E20B4FC01A0B50B50051D542 /* BLCMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCMainMenuViewController.m; sourceTree = "<group>"; };
 		E2F1DD161A002AE20091BEC0 /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F1DD1A1A002AE20091BEC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2F1DD1B1A002AE20091BEC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 			children = (
 				E2F1DD1D1A002AE20091BEC0 /* AppDelegate.h */,
 				E2F1DD1E1A002AE20091BEC0 /* AppDelegate.m */,
+				E20B4FBF1A0B50B50051D542 /* BLCMainMenuViewController.h */,
+				E20B4FC01A0B50B50051D542 /* BLCMainMenuViewController.m */,
 				E2F1DD201A002AE20091BEC0 /* ViewController.h */,
 				E2F1DD211A002AE20091BEC0 /* ViewController.m */,
 				E206A3561A02E8CC00C504E4 /* BLCWhiskeyViewController.h */,
@@ -221,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2F1DD221A002AE20091BEC0 /* ViewController.m in Sources */,
+				E20B4FC11A0B50B50051D542 /* BLCMainMenuViewController.m in Sources */,
 				E206A3581A02E8CC00C504E4 /* BLCWhiskeyViewController.m in Sources */,
 				E2F1DD1F1A002AE20091BEC0 /* AppDelegate.m in Sources */,
 				E2F1DD1C1A002AE20091BEC0 /* main.m in Sources */,

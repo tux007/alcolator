@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) UIButton *calculateButton;
 @property (weak, nonatomic) UITapGestureRecognizer *hideKeyboardTapGestureRecognizer;
+@property (assign) CGFloat numberOfWineGlassesForEquivalentAlcoholAmount;
 
 @end
 
@@ -48,6 +49,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    // self.title = NSLocalizedString(@"Wine", @"wine");
+    self.title = [NSString stringWithFormat:@"Wine (%.1f glasses)", _numberOfWineGlassesForEquivalentAlcoholAmount];
+    
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+        self.edgesForExtendedLayout = UIRectEdgeNone;
     
     
     // Set our primary view's background color to lightGrayColor
@@ -90,6 +96,9 @@
 - (void) viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
+    // This following will fix the view from being framed underneath the navigation bar and status bar.
+    self.navigationController.navigationBar.translucent = NO;
+    
     CGRect screen = [[UIScreen mainScreen] bounds];
     
     CGFloat viewWidth = screen.size.width;
@@ -98,7 +107,8 @@
     
     CGFloat itemWidth = viewWidth - padding - padding;
     
-    CGFloat itemHeight;
+    CGFloat itemHeight; 
+
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
