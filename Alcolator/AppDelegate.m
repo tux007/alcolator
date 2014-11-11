@@ -9,7 +9,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "BLCWhiskeyViewController.h"
-#import "BLCMainMenuViewController.h"
+// #import "BLCMainMenuViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -27,9 +28,16 @@
     //BLCWhiskeyViewController *whiskeyViewController = [[BLCWhiskeyViewController alloc] init];
     // self.window.rootViewController = whiskeyViewController;
     
-    BLCMainMenuViewController *mainMenuViewController = [[BLCMainMenuViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
-    self.window.rootViewController = navigationController;
+   // BLCMainMenuViewController *mainMenuViewController = [[BLCMainMenuViewController alloc] init];
+   // UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
+   // self.window.rootViewController = navigationController;
+    
+    ViewController *wineVC = [[ViewController alloc] init];
+    BLCWhiskeyViewController *whiskeyVC = [[BLCWhiskeyViewController alloc] init];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = @[wineVC, whiskeyVC];
+    
+    self.window.rootViewController = tabBarVC;
     
     [self.window makeKeyAndVisible];
     return YES;
